@@ -35,6 +35,12 @@
 
 /* ---------- Base ---------- */
 
+/* The view toggle is the `hidden` attribute — it must beat any
+   display declaration below (display:grid otherwise overrides it). */
+.dash-body [hidden] {
+  display: none !important;
+}
+
 .dash-body {
   margin: 0;
   min-height: 100vh;
@@ -535,6 +541,15 @@ textarea.neu-input {
 
 .dash-list__item + .dash-list__item {
   border-top: 1px solid rgba(244, 241, 232, 0.05);
+}
+
+/* Rows that act as containers for buttons, not click targets themselves */
+.dash-list__item--flat {
+  cursor: default;
+}
+
+.dash-list__item--flat:hover {
+  box-shadow: none;
 }
 
 .dash-list__main {

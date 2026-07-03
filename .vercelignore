@@ -1,0 +1,7 @@
+# Keep internal files out of the deployed static output.
+# NOTE: listings.json must stay deployed — it's the client-side fallback.
+.claude/
+scripts/
+*.md
+.env.example
+.gitignore
