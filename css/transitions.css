@@ -1,0 +1,64 @@
+/* ============================================================
+   Page transitions — curtain overlay + first-visit preloader.
+   Default state: curtain covers the page (JS reveals on load).
+   If JS never runs (html.no-js), the curtain stays hidden so the
+   site remains fully usable.
+   ============================================================ */
+
+.curtain {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-curtain);
+  display: grid;
+  place-items: center;
+  background: var(--ink-950);
+  transform: translateY(0);
+  pointer-events: none;
+}
+
+html.no-js .curtain {
+  display: none;
+}
+
+.curtain__mark {
+  display: grid;
+  place-items: center;
+  gap: 1.1rem;
+  opacity: 0;
+}
+
+.curtain__mark img {
+  width: 72px;
+  height: 72px;
+  border-radius: 10px;
+}
+
+.curtain__mark span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--paper-faint);
+}
+
+/* Thin gold progress line under the mark on first visit */
+.curtain__line {
+  width: 120px;
+  height: 1px;
+  background: var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.curtain__line i {
+  position: absolute;
+  inset: 0;
+  background: var(--gold-500);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+/* While JS is animating content in, avoid stray scrollbars */
+html.is-transitioning {
+  overflow: clip;
+}

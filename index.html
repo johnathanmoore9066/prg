@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PRG Property Management — Raleigh's Residential Rental Experts</title>
+  <meta name="description" content="Pace Realty Group Property Management — residential rentals and full-service property management across Wake County: Raleigh, Cary, and Apex.">
+  <script>document.documentElement.classList.remove('no-js')</script>
+
+  <link rel="icon" href="public/favicon.png">
+  <link rel="apple-touch-icon" href="public/icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PRG Property Management — Raleigh's Residential Rental Experts">
+  <meta property="og:description" content="Residential rentals and full-service property management across Wake County.">
+  <meta property="og:image" content="public/logo-large.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Outfit:wght@300..600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/transitions.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="home">
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__mark">
+      <img src="public/icon.png" alt="">
+      <div class="curtain__line"><i></i></div>
+      <span>Pace Realty Group</span>
+    </div>
+  </div>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="nav__logo wordmark" href="index.html" aria-label="PRG Property Management — home">
+        <img src="public/icon.png" alt="">
+        <span class="wordmark__text">
+          <b>Pace Realty Group</b>
+          <i>Property Management</i>
+        </span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="rentals.html">Rentals</a>
+        <a class="nav__link" href="owners.html">Owners</a>
+        <a class="nav__link" href="portal.html">Residents</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn--ghost nav__cta" href="rentals.html">Find a Rental</a>
+      <button class="nav__burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu">
+    <a class="menu__link" href="index.html">Home</a>
+    <a class="menu__link" href="rentals.html">Rentals</a>
+    <a class="menu__link" href="owners.html">Owners</a>
+    <a class="menu__link" href="portal.html">Residents</a>
+    <a class="menu__link" href="about.html">About</a>
+    <a class="menu__link" href="contact.html">Contact</a>
+    <div class="menu__meta">
+      <a data-config="phone" href="#"></a>
+      <a data-config="email" href="#"></a>
+    </div>
+  </div>
+
+  <main id="content">
+
+    <!-- ======= Featured rental — the "now streaming" hero ======= -->
+    <section class="hero hero--feature" data-feature-hero data-parallax data-kenburns>
+      <figure class="media media--scrim-left" aria-hidden="true">
+        <img class="media__img" src="public/placeholders/6001-hero.jpg" alt="" fetchpriority="high">
+      </figure>
+
+      <div class="hero__content" data-hero-stagger>
+        <p class="eyebrow">Featured Rental</p>
+        <h1 class="hero__title">
+          <span class="line"><span>6001 Hares Ear Court</span></span>
+          <span class="line"><span>Wake Forest, NC</span></span>
+        </h1>
+        <p class="meta">
+          <span data-slot="status">For Rent</span>
+          <span data-slot="city">Wake Forest, NC</span>
+          <span class="meta__price" data-slot="price"></span>
+        </p>
+        <p class="hero__tagline" data-slot="tagline"></p>
+        <div class="hero__actions">
+          <a class="btn" href="rentals.html" data-slot-href="detail">View Property</a>
+          <a class="btn btn--ghost" href="rentals.html">Browse All Rentals</a>
+        </div>
+      </div>
+
+      <span class="hero__scroll" aria-hidden="true">Scroll</span>
+    </section>
+
+    <!-- ======= Now Showing — poster row ======= -->
+    <section class="section" aria-labelledby="now-showing">
+      <div class="container section__head" data-reveal>
+        <div>
+          <p class="eyebrow">The Current Lineup</p>
+          <h2 id="now-showing">Now Showing</h2>
+        </div>
+        <a class="section__link" href="rentals.html">All rentals</a>
+      </div>
+      <div class="row">
+        <div class="row__track" data-row-track><!-- poster cards render here --></div>
+      </div>
+    </section>
+
+    <!-- ======= Residents / Owners split ======= -->
+    <section class="split" aria-label="Choose your path">
+      <a class="split__panel" href="portal.html" data-reveal>
+        <figure class="media media--card" aria-hidden="true">
+          <img class="media__img" src="public/placeholders/split-residents.jpg" alt="" loading="lazy">
+        </figure>
+        <div class="split__content">
+          <p class="eyebrow">For Residents</p>
+          <h3>Feel at home, from day one</h3>
+          <p>Maintenance requests, applications, and rent tools — a full resident portal is on the way.</p>
+          <span class="split__cue">Visit the portal</span>
+        </div>
+      </a>
+      <a class="split__panel" href="owners.html" data-reveal>
+        <figure class="media media--card" aria-hidden="true">
+          <img class="media__img" src="public/placeholders/split-owners.jpg" alt="" loading="lazy">
+        </figure>
+        <div class="split__content">
+          <p class="eyebrow">For Owners</p>
+          <h3>Your investment, expertly run</h3>
+          <p>We are the liaison between owners and tenants — marketing, screening, care, and communication.</p>
+          <span class="split__cue">Explore management</span>
+        </div>
+      </a>
+    </section>
+
+    <!-- ======= Owner CTA band ======= -->
+    <section class="band">
+      <div class="band__inner" data-reveal>
+        <p class="eyebrow">Property Management</p>
+        <h2>Your property. Our production.</h2>
+        <p>Own a rental in the Triangle? Let Pace Realty Group Property Management take the day-to-day off your hands — and put your property in the spotlight.</p>
+        <div class="hero__actions">
+          <a class="btn" href="owners.html">Let's Talk Management</a>
+          <a class="btn btn--ghost" href="contact.html">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="wordmark wordmark--lg">
+          <img src="public/icon.png" alt="">
+          <span class="wordmark__text">
+            <b>Pace Realty Group</b>
+            <i>Property Management</i>
+          </span>
+        </span>
+        <p>Raleigh's residential property management experts. Wake County — Raleigh, Cary, Apex.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__list">
+          <li><a href="rentals.html">Rentals</a></li>
+          <li><a href="owners.html">Owner Services</a></li>
+          <li><a href="portal.html">Resident Portal</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <ul class="footer__list">
+          <li><a data-config="phone" href="#"></a></li>
+          <li><a data-config="email" href="#"></a></li>
+          <li>Fax: <span data-config="fax"></span></li>
+          <li><span data-config="address"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <div class="footer__legal-inner">
+        <span>© <span data-config="year">2026</span> Pace Realty Group Property Management</span>
+        <span>The property management division of Pace Realty Group</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <template id="tpl-poster-card">
+    <a class="card ratio-poster" href="#">
+      <figure class="media media--card" aria-hidden="true">
+        <img class="media__img" alt="" loading="lazy">
+      </figure>
+      <span class="badge card__badge" data-slot="status"></span>
+      <span class="card__body">
+        <span class="card__title" data-slot="address"></span>
+        <span class="card__meta meta"><span data-slot="city"></span><span class="meta__price" data-slot="price"></span></span>
+        <span class="card__tagline" data-slot="tagline"></span>
+      </span>
+    </a>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

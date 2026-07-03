@@ -1,0 +1,148 @@
+/* ============================================================
+   Layout — containers, section rhythm, media frames
+   ============================================================ */
+
+.container {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.container--wide {
+  width: var(--container-wide);
+}
+
+.section {
+  padding-block: var(--space-7);
+  position: relative;
+}
+
+.section--tight {
+  padding-block: var(--space-6);
+}
+
+.section--flush {
+  padding-block: 0;
+}
+
+.section__head {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4);
+  margin-bottom: var(--space-5);
+}
+
+.section__head h2 {
+  font-size: var(--text-h2);
+}
+
+.section__head .eyebrow {
+  display: block;
+  margin-bottom: var(--space-2);
+}
+
+.section__link {
+  flex: none;
+  font-size: var(--text-micro);
+  font-weight: 600;
+  letter-spacing: var(--track-caps);
+  text-transform: uppercase;
+  color: var(--paper-dim);
+  padding-bottom: 0.35em;
+  border-bottom: 1px solid var(--line-strong);
+  transition: color var(--dur-fast) var(--ease-out-expo), border-color var(--dur-fast) var(--ease-out-expo);
+}
+
+.section__link:hover {
+  color: var(--gold-400);
+  border-color: var(--gold-500);
+}
+
+/* ============================================================
+   Media frame — the cinematic image treatment.
+   <figure class="media"><img class="media__img">…</figure>
+   Layers: image → scrim → (optional) inner vignette
+   ============================================================ */
+
+.media {
+  position: relative;
+  overflow: hidden;
+  background: var(--ink-800);
+  isolation: isolate;
+}
+
+.media__img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform-origin: center;
+}
+
+.media::after {
+  /* legibility scrim */
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--scrim-bottom);
+  pointer-events: none;
+}
+
+.media--scrim-left::after {
+  background: var(--scrim-left), var(--scrim-bottom);
+}
+
+.media--card::after {
+  background: var(--scrim-card);
+}
+
+.media--plain::after {
+  background: none;
+}
+
+/* Fallback poster (no image available): ink panel + gold mark */
+.media--fallback {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(120% 120% at 50% 0%, var(--ink-700), var(--ink-900));
+}
+
+.media--fallback::before {
+  content: "PRG";
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  letter-spacing: 0.08em;
+  color: var(--gold-600);
+  opacity: 0.55;
+}
+
+/* ---- Aspect helpers ---- */
+.ratio-poster {
+  aspect-ratio: 2 / 3;
+}
+
+.ratio-wide {
+  aspect-ratio: 16 / 9;
+}
+
+/* ---- Grids ---- */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid--posters {
+  grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr));
+  gap: var(--space-5) var(--space-4);
+}
+
+.grid--tiles {
+  grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
+}
+
+/* ---- Hairline divider ---- */
+.hairline {
+  border: 0;
+  border-top: 1px solid var(--line);
+}

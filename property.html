@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Property — PRG Property Management</title>
+  <meta name="description" content="Rental home details from Pace Realty Group Property Management.">
+  <script>document.documentElement.classList.remove('no-js')</script>
+
+  <link rel="icon" href="public/favicon.png">
+  <link rel="apple-touch-icon" href="public/icon.png">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Property — PRG Property Management">
+  <meta property="og:description" content="Rental home details from PRG Property Management.">
+  <meta property="og:image" content="public/logo-large.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Outfit:wght@300..600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/transitions.css">
+  <link rel="stylesheet" href="css/pages.css">
+</head>
+<body data-page="property">
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <div class="curtain" aria-hidden="true">
+    <div class="curtain__mark">
+      <img src="public/icon.png" alt="">
+      <div class="curtain__line"><i></i></div>
+      <span>Pace Realty Group</span>
+    </div>
+  </div>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner">
+      <a class="nav__logo wordmark" href="index.html" aria-label="PRG Property Management — home">
+        <img src="public/icon.png" alt="">
+        <span class="wordmark__text">
+          <b>Pace Realty Group</b>
+          <i>Property Management</i>
+        </span>
+      </a>
+      <nav class="nav__links" aria-label="Primary">
+        <a class="nav__link" href="rentals.html">Rentals</a>
+        <a class="nav__link" href="owners.html">Owners</a>
+        <a class="nav__link" href="portal.html">Residents</a>
+        <a class="nav__link" href="about.html">About</a>
+        <a class="nav__link" href="contact.html">Contact</a>
+      </nav>
+      <a class="btn btn--ghost nav__cta" href="rentals.html">All Rentals</a>
+      <button class="nav__burger" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu">
+    <a class="menu__link" href="index.html">Home</a>
+    <a class="menu__link" href="rentals.html">Rentals</a>
+    <a class="menu__link" href="owners.html">Owners</a>
+    <a class="menu__link" href="portal.html">Residents</a>
+    <a class="menu__link" href="about.html">About</a>
+    <a class="menu__link" href="contact.html">Contact</a>
+    <div class="menu__meta">
+      <a data-config="phone" href="#"></a>
+      <a data-config="email" href="#"></a>
+    </div>
+  </div>
+
+  <main id="content">
+
+    <!-- ======= Backdrop hero ======= -->
+    <section class="hero hero--detail" data-detail-hero data-parallax data-kenburns>
+      <figure class="media" data-detail-backdrop aria-hidden="true">
+        <img class="media__img" alt="" fetchpriority="high">
+      </figure>
+    </section>
+
+    <!-- ======= Title page ======= -->
+    <article class="section section--tight" data-detail>
+      <div class="container detail">
+
+        <figure class="detail__poster media--card ratio-poster media" data-detail-poster>
+          <img class="media__img" alt="">
+        </figure>
+
+        <div class="detail__body">
+          <div data-hero-stagger>
+            <p style="margin-bottom: var(--space-3)"><span class="badge" data-slot="status"></span></p>
+            <h1 class="hero__title" style="font-size: var(--text-h1); margin-bottom: var(--space-3)" data-slot="address"></h1>
+            <p class="meta">
+              <span><span data-slot="city"></span>&nbsp;<span data-slot="zip"></span></span>
+              <span class="meta__price" data-slot="price"></span>
+              <span data-slot="mls"></span>
+            </p>
+          </div>
+
+          <p class="lede" data-slot="tagline"></p>
+
+          <div class="facts" data-reveal>
+            <div class="facts__item">
+              <span class="facts__value" data-slot="beds"></span>
+              <span class="facts__label">Bedrooms</span>
+            </div>
+            <div class="facts__item">
+              <span class="facts__value" data-slot="baths"></span>
+              <span class="facts__label">Bathrooms</span>
+            </div>
+            <div class="facts__item">
+              <span class="facts__value" data-slot="sqft"></span>
+              <span class="facts__label">Approx. Sq Ft</span>
+            </div>
+            <div class="facts__item">
+              <span class="facts__value" data-slot="mls-num"></span>
+              <span class="facts__label">MLS Number</span>
+            </div>
+          </div>
+
+          <div data-reveal>
+            <p class="eyebrow" style="margin-bottom: var(--space-2)">The Story</p>
+            <p class="detail__desc" data-slot="desc"></p>
+          </div>
+
+          <div class="detail__contact" data-reveal>
+            <a class="btn" href="#showing">Request a Showing</a>
+            <a class="btn btn--ghost" data-config="phone" href="#"></a>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ======= Not-found state (shown when ?mls= is missing/unknown) ======= -->
+    <section class="notfound" data-notfound hidden>
+      <p class="eyebrow">No longer showing</p>
+      <h1>That listing isn't on the marquee</h1>
+      <p>It may have been rented, or the link is out of date. The current lineup is one click away.</p>
+      <div class="hero__actions">
+        <a class="btn" href="rentals.html">Browse Rentals</a>
+        <a class="btn btn--ghost" href="contact.html">Ask About It</a>
+      </div>
+    </section>
+
+    <!-- ======= Request a showing ======= -->
+    <section class="section" id="showing" aria-labelledby="showing-title">
+      <div class="container" style="max-width: 860px">
+        <div class="panel" data-reveal>
+          <p class="eyebrow">Private Screening</p>
+          <h2 id="showing-title" style="margin: var(--space-2) 0 var(--space-4)">Request a Showing</h2>
+          <form class="form" data-lead data-success="Showing request received — we'll confirm a time shortly.">
+            <input type="hidden" name="property" value="" data-form-property>
+            <label class="hp" aria-hidden="true">Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="s-name">Full Name</label>
+                <input class="field__input" id="s-name" name="name" type="text" autocomplete="name" required>
+                <span class="field__error"></span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="s-email">Email</label>
+                <input class="field__input" id="s-email" name="email" type="email" autocomplete="email" required>
+                <span class="field__error"></span>
+              </div>
+            </div>
+            <div class="form__row">
+              <div class="field">
+                <label class="field__label" for="s-phone">Phone</label>
+                <input class="field__input" id="s-phone" name="phone" type="tel" autocomplete="tel">
+                <span class="field__error"></span>
+              </div>
+              <div class="field">
+                <label class="field__label" for="s-date">Ideal Move-in</label>
+                <input class="field__input" id="s-date" name="move_in" type="date">
+                <span class="field__error"></span>
+              </div>
+            </div>
+            <div class="field">
+              <label class="field__label" for="s-msg">Anything we should know?</label>
+              <textarea class="field__input" id="s-msg" name="message" placeholder="Pets, timing, questions about the home…"></textarea>
+              <span class="field__error"></span>
+            </div>
+            <div class="detail__contact">
+              <button class="btn" type="submit">Send Request</button>
+              <p class="form__note">Demo preview — submissions aren't sent yet.</p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= More like this ======= -->
+    <section class="section section--tight" data-related aria-labelledby="related-title">
+      <div class="container section__head" data-reveal>
+        <div>
+          <p class="eyebrow">Keep Browsing</p>
+          <h2 id="related-title">More Like This</h2>
+        </div>
+        <a class="section__link" href="rentals.html">All rentals</a>
+      </div>
+      <div class="row">
+        <div class="row__track" data-row-track></div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="wordmark wordmark--lg">
+          <img src="public/icon.png" alt="">
+          <span class="wordmark__text">
+            <b>Pace Realty Group</b>
+            <i>Property Management</i>
+          </span>
+        </span>
+        <p>Raleigh's residential property management experts. Wake County — Raleigh, Cary, Apex.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul class="footer__list">
+          <li><a href="rentals.html">Rentals</a></li>
+          <li><a href="owners.html">Owner Services</a></li>
+          <li><a href="portal.html">Resident Portal</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <ul class="footer__list">
+          <li><a data-config="phone" href="#"></a></li>
+          <li><a data-config="email" href="#"></a></li>
+          <li>Fax: <span data-config="fax"></span></li>
+          <li><span data-config="address"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__legal">
+      <div class="footer__legal-inner">
+        <span>© <span data-config="year">2026</span> Pace Realty Group Property Management</span>
+        <span>The property management division of Pace Realty Group</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="grain" aria-hidden="true"></div>
+
+  <template id="tpl-poster-card">
+    <a class="card ratio-poster" href="#">
+      <figure class="media media--card" aria-hidden="true">
+        <img class="media__img" alt="" loading="lazy">
+      </figure>
+      <span class="badge card__badge" data-slot="status"></span>
+      <span class="card__body">
+        <span class="card__title" data-slot="address"></span>
+        <span class="card__meta meta"><span data-slot="city"></span><span class="meta__price" data-slot="price"></span></span>
+        <span class="card__tagline" data-slot="tagline"></span>
+      </span>
+    </a>
+  </template>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.7/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.4/dist/lenis.min.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "listings": [
+    {
+      "mls_number": 2052155,
+      "street_address": "705 Mills Street",
+      "city": "Raleigh",
+      "state": "NC",
+      "zipcode": "27608",
+      "monthly_price": 1225,
+      "status": "For Rent",
+      "contact_email": "lpace@prgtriangle.com",
+      "description": "This property is available as a SHORT TERM rental ONLY for the following dates 5/1/2016-10/31/2016. This is a FULLY FURNISHED updated Brick Ranch in Ideal Location. Hardwood floors throughout. Renovated Kitchen with tile floor and Eat-in area. Rear Deck overlooks a fenced-in yard. Washer/Dryer included.",
+      "is_active_listing": true,
+      "featured": false,
+      "image": "705.jpg",
+      "hero_image": "public/placeholders/705-hero.jpg",
+      "tagline": "A fully furnished brick ranch in the heart of Raleigh.",
+      "beds": 3,
+      "baths": 1,
+      "sqft": 1150
+    },
+    {
+      "mls_number": 2050189,
+      "street_address": "6001 Hares Ear Court",
+      "city": "Wake Forest",
+      "state": "NC",
+      "zipcode": "27587",
+      "monthly_price": 2495,
+      "status": "For Rent",
+      "contact_email": "lpace@prgtriangle.com",
+      "description": "Big and Beautiful, this home is Move in Ready! Community Rec center and Swimming Pool are Included! Fully Loaded Kitchen with all of the Wants and Needs to Create Your Favorite Family Meals! Available Now! Pets will be considered on a case by case basis.",
+      "is_active_listing": true,
+      "featured": true,
+      "image": "6001.jpg",
+      "hero_image": "public/placeholders/6001-hero.jpg",
+      "tagline": "Big, beautiful, and move-in ready in Wake Forest.",
+      "beds": 5,
+      "baths": 4,
+      "sqft": 3450
+    },
+    {
+      "mls_number": 2059522,
+      "street_address": "4234 Vienna Crest Drive",
+      "city": "Raleigh",
+      "state": "NC",
+      "zipcode": "27613",
+      "monthly_price": 1275,
+      "status": "For Rent",
+      "contact_email": "lpace@prgtriangle.com",
+      "description": "This townhome is close to Everything! Movies, Shopping, Dining, 440 and 540! You can't beat this location! Bright and Open with Fresh Paint and New Features throughout. Spacious Eat In Kitchen with great Pantry space that opens to Living Room with Gas Log Fireplace. This home is MOVE IN READY! NO PETS, no exceptions at this time.",
+      "is_active_listing": true,
+      "featured": false,
+      "image": "4234.jpg",
+      "hero_image": "public/placeholders/4234-hero.jpg",
+      "tagline": "Bright townhome living, minutes from everything.",
+      "beds": 2,
+      "baths": 2.5,
+      "sqft": 1250
+    }
+  ]
+}
