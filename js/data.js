@@ -1,23 +1,35 @@
 /**
- * Data layer — single cached fetch of listings.json + helpers.
- * All rendering reads through these functions so swapping the data
- * source later (an API, a CMS) touches this file only.
+ * Data layer — single cached fetch of the listings API + helpers.
+ * All rendering reads through these functions so the data source is
+ * swappable in this file only. The API is tried first (live dashboard
+ * edits); the static listings.json is the fallback, which also keeps
+ * plain static hosting fully working.
  */
+
+import { CONFIG } from './config.js';
 
 let _listingsPromise = null;
 
+async function fetchListings(url) {
+  const res = await fetch(url, { cache: 'no-cache' });
+  if (!res.ok) throw new Error(`${url} ${res.status}`);
+  const data = await res.json();
+  return Array.isArray(data.listings) ? data.listings : [];
+}
+
 export function getListings() {
   if (!_listingsPromise) {
-    _listingsPromise = fetch('listings.json', { cache: 'no-cache' })
-      .then((res) => {
-        if (!res.ok) throw new Error(`listings.json ${res.status}`);
-        return res.json();
-      })
-      .then((data) => (Array.isArray(data.listings) ? data.listings : []))
-      .catch((err) => {
-        console.warn('[PRG] Could not load listings:', err.message);
-        return [];
-      });
+    const sources = [CONFIG.LISTINGS_ENDPOINT, 'listings.json'].filter(Boolean);
+    _listingsPromise = (async () => {
+      for (const url of sources) {
+        try {
+          return await fetchListings(url);
+        } catch (err) {
+          console.warn(`[PRG] Could not load ${url}:`, err.message);
+        }
+      }
+      return [];
+    })();
   }
   return _listingsPromise;
 }

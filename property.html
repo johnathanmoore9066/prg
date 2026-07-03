@@ -151,7 +151,7 @@
         <div class="panel" data-reveal>
           <p class="eyebrow">Private Screening</p>
           <h2 id="showing-title" style="margin: var(--space-2) 0 var(--space-4)">Request a Showing</h2>
-          <form class="form" data-lead data-success="Showing request received — we'll confirm a time shortly.">
+          <form class="form" data-lead data-form-type="showing" data-success="Showing request received — we'll confirm a time shortly.">
             <input type="hidden" name="property" value="" data-form-property>
             <label class="hp" aria-hidden="true">Leave this field empty<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
             <div class="form__row">
@@ -185,7 +185,6 @@
             </div>
             <div class="detail__contact">
               <button class="btn" type="submit">Send Request</button>
-              <p class="form__note">Demo preview — submissions aren't sent yet.</p>
             </div>
           </form>
         </div>
@@ -243,7 +242,7 @@
     <div class="footer__legal">
       <div class="footer__legal-inner">
         <span>© <span data-config="year">2026</span> Pace Realty Group Property Management</span>
-        <span>The property management division of Pace Realty Group</span>
+        <span>The property management division of Pace Realty Group · <a class="footer__staff" href="dashboard.html">Staff</a></span>
       </div>
     </div>
   </footer>

@@ -920,6 +920,16 @@ select.field__input {
   color: var(--paper-faint);
 }
 
+.footer__staff {
+  color: var(--paper-faint);
+  text-decoration: none;
+  transition: color var(--dur-fast) linear;
+}
+
+.footer__staff:hover {
+  color: var(--gold-400);
+}
+
 @media (max-width: 860px) {
   .footer__inner {
     grid-template-columns: 1fr;

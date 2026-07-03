@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Staff Dashboard — PRG Property Management</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="public/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Outfit:wght@300..600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="dash-body">
+
+  <!-- ======= Sign-in gate ======= -->
+  <div class="dash-login" data-view-login hidden>
+    <form class="neu-card dash-login__card" data-login-form novalidate>
+      <div class="dash-login__brand">
+        <img src="public/icon.png" alt="">
+        <div>
+          <b>Pace Realty Group</b>
+          <i>Staff Dashboard</i>
+        </div>
+      </div>
+      <div class="dash-field">
+        <label for="login-email">Email</label>
+        <input class="neu-input" id="login-email" name="email" type="email" autocomplete="username" required>
+      </div>
+      <div class="dash-field">
+        <label for="login-password">Password</label>
+        <input class="neu-input" id="login-password" name="password" type="password" autocomplete="current-password" required>
+      </div>
+      <p class="dash-login__error" data-login-error hidden></p>
+      <button class="neu-btn neu-btn--gold" type="submit" data-login-submit>Sign in</button>
+      <a class="dash-login__back" href="index.html">← Back to the site</a>
+    </form>
+  </div>
+
+  <!-- ======= App shell ======= -->
+  <div class="dash" data-view-app hidden>
+    <aside class="dash-side">
+      <a class="dash-side__logo" href="index.html" title="View public site">
+        <img src="public/icon.png" alt="">
+        <span><b>Pace Realty Group</b><i>Staff Dashboard</i></span>
+      </a>
+      <nav class="dash-side__nav" aria-label="Dashboard">
+        <a class="dash-navlink" href="#/overview" data-nav="overview">
+          <span aria-hidden="true">◈</span> Overview
+        </a>
+        <a class="dash-navlink" href="#/properties" data-nav="properties">
+          <span aria-hidden="true">⌂</span> Properties
+        </a>
+        <a class="dash-navlink" href="#/submissions" data-nav="submissions">
+          <span aria-hidden="true">✉</span> Submissions
+          <em class="dash-badge" data-unread-badge hidden></em>
+        </a>
+      </nav>
+      <div class="dash-side__foot">
+        <span class="dash-side__user" data-user-label></span>
+        <button class="neu-btn neu-btn--small" type="button" data-logout>Sign out</button>
+      </div>
+    </aside>
+
+    <main class="dash-main" data-outlet aria-live="polite"></main>
+  </div>
+
+  <!-- ======= Modal + confirm scaffold (managed by js/dashboard/ui.js) ======= -->
+  <div class="dash-modal" data-modal hidden>
+    <div class="dash-modal__scrim" data-modal-close></div>
+    <div class="neu-card dash-modal__card" role="dialog" aria-modal="true" data-modal-card></div>
+  </div>
+
+  <div class="dash-toast" data-toast role="status" hidden></div>
+
+  <script type="module" src="js/dashboard/main.js"></script>
+</body>
+</html>

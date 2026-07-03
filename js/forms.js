@@ -54,12 +54,12 @@ function markValidity(form) {
 async function submitLead(form) {
   const data = Object.fromEntries(new FormData(form).entries());
 
-  // Spam controls — fail silently
+  // Spam controls — fail silently. The server re-checks both signals, so
+  // website/_ts stay in the payload.
   const elapsed = Date.now() - Number(data._ts || 0);
   if (data.website || elapsed < MIN_HUMAN_MS) return true;
 
-  delete data.website;
-  delete data._ts;
+  data.form_type = form.dataset.formType;
   data._page = location.pathname + location.search;
 
   if (CONFIG.DEMO_MODE || !CONFIG.LEADS_ENDPOINT) {

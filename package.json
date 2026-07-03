@@ -1,0 +1,16 @@
+{
+  "name": "prg-property-site",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=20.6" },
+  "scripts": {
+    "dev": "node --env-file-if-exists=.env.local scripts/dev-server.js",
+    "db:setup": "node --env-file=.env.local scripts/setup-db.js",
+    "static": "python -m http.server 5174"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.0.1",
+    "bcryptjs": "^3.0.2",
+    "jose": "^6.0.11"
+  }
+}

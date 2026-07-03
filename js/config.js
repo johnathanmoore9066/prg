@@ -16,11 +16,15 @@ export const CONFIG = {
   FAX: '919-400-4238',
   ADDRESS_LINES: ['P.O. Box 6607', 'Raleigh, NC 27628-6607'],
 
-  // Phase 2: point this at a serverless function (Cloudflare Worker /
-  // Netlify Function) that forwards leads. The destination email is never
-  // exposed as a send target in client markup.
-  LEADS_ENDPOINT: null,
+  // Backend endpoints (Vercel functions under /api). The destination email
+  // is never exposed as a send target in client markup.
+  LEADS_ENDPOINT: '/api/leads',
+
+  // Listings are served from the database; js/data.js falls back to the
+  // static listings.json when this endpoint is unreachable (e.g. under
+  // `python -m http.server`).
+  LISTINGS_ENDPOINT: '/api/listings',
 
   // Demo mode: forms validate + simulate success instead of submitting.
-  DEMO_MODE: true,
+  DEMO_MODE: false,
 };
