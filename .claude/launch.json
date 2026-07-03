@@ -1,0 +1,17 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "prg-dev",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["--env-file-if-exists=.env.local", "scripts/dev-server.js"],
+      "port": 5173
+    },
+    {
+      "name": "prg-static",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "5174"],
+      "port": 5174
+    }
+  ]
+}
